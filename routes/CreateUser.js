@@ -56,8 +56,8 @@ router.post("/loginuser",[
          if(!userData){
             return res.status(400).json({errors:"Try logging with correct credentials"})
          }
-
          if(req.body.password !== userData.password){
+            console.log("Hello , password is not correct")
             return res.status(400).json({errors:"Try logging with correct credentials"})
 
          }

@@ -2,7 +2,7 @@ const express=require('express')
 const router=express.Router()
 
 
-router.post('/foodData',(req,res)=>{
+router.get('/displayData',(req,res)=>{
 
     try{
         res.send([global.food_item,global.foodCategory])
@@ -10,8 +10,6 @@ router.post('/foodData',(req,res)=>{
     }catch(error){
         console.error(error.message)
         res.send("Server error")
-
-
     }
 })
 
